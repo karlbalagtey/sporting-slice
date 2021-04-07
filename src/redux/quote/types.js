@@ -1,0 +1,8 @@
+const QuoteActionTypes = {
+  ADD_QUOTE_START: 'ADD_QUOTE_START',
+  ADD_QUOTE_SUCCESS: 'ADD_QUOTE_SUCCESS',
+  ADD_QUOTE_FAILURE: 'ADD_QUOTE_FAILURE',
+  RESET_ADD_QUOTE: 'RESET_ADD_QUOTE',
+};
+
+export default QuoteActionTypes;
