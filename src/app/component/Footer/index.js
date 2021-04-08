@@ -1,28 +1,24 @@
 import styled from 'styled-components/macro';
+import { StyleConstants } from 'styles/StyleConstants';
 
 export function Footer() {
   return (
     <FooterWrap>
-      <Container>
-        <small>2021 Sportlabs Technology Ltd. All rights reserved</small>
-      </Container>
+      <Container>2021 Sportlabs Technology Ltd. All rights reserved</Container>
     </FooterWrap>
   );
 }
 
 const FooterWrap = styled.footer`
-  background-color: #ffffff;
-  padding: 1.5rem;
+  background-color: #fff;
+  padding: 20px;
   margin-top: auto;
   display: flex;
   justify-content: center;
-
-  small {
-    font-size: 0.7rem;
-  }
 `;
 
-const Container = styled.div`
-  max-width: 1024px;
+const Container = styled.p`
+  max-width: ${StyleConstants.CONTAINER};
   width: 100%;
+  font-size: 11px;
 `;

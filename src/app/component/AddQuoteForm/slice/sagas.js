@@ -1,7 +1,5 @@
 import { takeLatest, put, call, all, select } from 'redux-saga/effects';
-import QuoteActionTypes from './types';
-
-import { addQuoteSuccess, addQuoteFailure } from './actions';
+import { quoteActions as actions } from '.';
 import { selectQuotes, selectQuoteAdded } from './selectors';
 
 export function* addQuote() {
@@ -16,15 +14,15 @@ export function* addQuote() {
       quotes.push(quoteAdded);
     }
 
-    yield put(addQuoteSuccess(quotes));
+    yield put(actions.addQuoteSuccess(quotes));
   } catch (error) {
     console.log(error);
-    yield put(addQuoteFailure(error));
+    yield put(actions.addQuoteFailure(error));
   }
 }
 
 export function* onAddQuoteStart() {
-  yield takeLatest(QuoteActionTypes.ADD_QUOTE_START, addQuote);
+  yield takeLatest(actions.addQuoteStart.type, addQuote);
 }
 
 export function* quoteSagas() {

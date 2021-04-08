@@ -18,7 +18,7 @@ const HeaderWrap = styled.header`
   background-position: 50% 50%;
 
   h1 {
-    color: #ffffff;
+    color: #fff;
     font-size: 3.4em;
     font-weight: 300;
   }

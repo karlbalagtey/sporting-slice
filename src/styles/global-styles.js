@@ -11,10 +11,6 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Avenir Next Pro', sans-serif;
   }
-
-  body.fontLoaded {
-    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  }
   
   p,
   label {
